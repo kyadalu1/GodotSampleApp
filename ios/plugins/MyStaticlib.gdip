@@ -1,0 +1,29 @@
+[config]
+name="MyStaticlib"
+binary="libmystatticlib.a"
+
+initialization="init_my_plugin"
+deinitialization="deinit_my_plugin"
+
+[dependencies]
+linked=[]
+embedded=[]
+system=["Foundation.framework"]
+
+capabilities=[]
+
+files=["data.json"]
+
+linker_flags=["-ObjC"]
+
+[plist]
+PlistKeyWithDefaultType="Some Info.plist key you might need"
+StringPlistKey:string="String value"
+IntegerPlistKey:integer=42
+BooleanPlistKey:boolean=true
+RawPlistKey:raw="
+<array>
+	<string>UIInterfaceOrientationPortrait</string>
+</array>
+"
+StringPlistKeyToInput:string_input="Type something"
